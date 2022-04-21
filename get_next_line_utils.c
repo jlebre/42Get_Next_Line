@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:36:20 by jlebre            #+#    #+#             */
-/*   Updated: 2022/04/20 16:44:21 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/04/21 13:37:21 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	if (s[i] == (char)c)
 		return (1);
