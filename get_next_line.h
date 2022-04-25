@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 14:25:42 by jlebre            #+#    #+#             */
-/*   Updated: 2022/04/21 13:48:17 by jlebre           ###   ########.fr       */
+/*   Created: 2022/04/25 17:22:49 by jlebre            #+#    #+#             */
+/*   Updated: 2022/04/25 18:24:30 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 char	*get_next_line(int fd);
-int		ft_strlen(const char *str);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strdup(const char *str);
+char	*get_line(char *line, char *buf);
+int		check(char *buf);
 
 #endif
