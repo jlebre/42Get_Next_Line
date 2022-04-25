@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 17:19:10 by jlebre            #+#    #+#             */
-/*   Updated: 2022/04/25 18:51:00 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/04/25 18:57:31 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*get_next_line(int fd)
 {
-	static char		buf[BUFFER_SIZE + 1];
+	static char		buf[FOPEN_MAX][BUFFER_SIZE + 1];
 	char			*line;
 	int				rd;
 
@@ -24,11 +24,11 @@ char	*get_next_line(int fd)
 	rd = 1;
 	while (rd > 0)
 	{
-		if (!buf[0])
-			rd = read(fd, buf, BUFFER_SIZE);
+		if (!buf[fd][0])
+			rd = read(fd, buf[fd], BUFFER_SIZE);
 		if (rd > 0)
-			line = get_line(line, buf);
-		if (check(buf))
+			line = get_line(line, buf[fd]);
+		if (check(buf[fd]))
 			break ;
 	}
 	return (line);
