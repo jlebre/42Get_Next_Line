@@ -6,7 +6,7 @@
 /*   By: jlebre <jlebre@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 17:25:07 by jlebre            #+#    #+#             */
-/*   Updated: 2022/04/25 18:48:15 by jlebre           ###   ########.fr       */
+/*   Updated: 2022/04/25 19:04:05 by jlebre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ char	*get_line(char *line, char *buf)
 
 	i = 0;
 	tmp = line;
-
 	line = malloc(ft_strlen(buf) + ft_strlen(line) + 1);
 	if (!line)
 		return (0);
