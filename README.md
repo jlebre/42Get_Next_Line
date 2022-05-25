@@ -2,8 +2,7 @@
 ![school_42](https://user-images.githubusercontent.com/94384240/170166839-7f99093f-c242-4973-bc06-dfbaf88dee59.jpeg)
 42 Cursus Get_Next_Line
 
-This was the third project I made at 42 Lisbon! After spending more than 1 month trying to understand this project 
-[Ezequiel](https://github.com/zico15) explained it to me in the simplest of ways.
+This was the third project I made at 42 Lisbon! After spending a long time trying to understand the goal of the get_next_line function, [Ezequiel](https://github.com/zico15) explained it to me in the simplest of ways.
 It was an important project to learn how to read file descriptors.
 
 To see the subject [click here](https://github.com/jlebre/get_next_line/blob/main/get_next_line.pdf) !
